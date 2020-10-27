@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /*Primary colors*/
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+
+  /* Neutral colors*/
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  /*Background-colors*/
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+
+  /* Dividers*/
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body {
+  align-items: center;
+  background: linear-gradient(var(--soft-violet), var(--soft-blue));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  padding: 5rem 1.5rem;
+}
+
+.section {
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0px 12px 13px -4px rgb(66, 66, 66);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  padding: 2rem 1.7rem;
+  max-width: 90%;
+}
+
+.questions-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.questions__FAQ {
+  margin-top: 3em;
+}
+
+.section-img {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+}
+
+.section-img__item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -2.5rem;
+  height: 100%;
+  left: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+.section-img__item::after {
+  content: url("../images/bg-pattern-mobile.svg");
+
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  width: 100%;
+}
+
+.section__item {
+  border: none;
+  border-bottom: 1px solid var(--light-grayish-blue);
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.question-box {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 0.7em;
+  justify-content: space-between;
+}
+
+.question-box__text {
+  color: var(--dark-grayish-bluee-blue);
+  font-weight: 400;
+  transition: color ease-in-out 0.3s;
+}
+
+.answer__text {
+  color: var(--very-dark-grayish-blue);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.question-box:hover,
+.question-box__text:hover {
+  color: var(--soft-red);
+}
+
+.question-box__text--active {
+  color: var(--very-dark-grayish-blue);
+  font-weight: 700;
+}
+
+.section__item > .answer {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
+.section__item > .answer--active {
+  height: 80px;
+  max-height: 100px;
+  transition: height 0.5s;
+}
+
+.answer__text {
+  transform: translateY(-200%);
+  transition: transform 0.5s;
+}
+
+.answer__text--active {
+  transform: translateY(0);
+}
+
+.question-box__img {
+  height: 100%;
+  max-width: 100%;
+  transition: transform 0.5s;
+}
+
+.question-box__img--active {
+  transform: rotate(180deg);
+}
+
+.social-media {
+  font-size: 1.05em;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
+.social-media__item:first-child {
+  margin-right: 1rem;
+}
+
+.social-media__link {
+  color: white;
+}
+
+/* Medias to desktop Version */
+
+@media screen and (min-width: 1300px) {
+  body {
+    padding: 0 6rem;
+  }
+  .section {
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .questions-container {
+    align-items: flex-start;
+  }
+
+  .img-woman {
+    content: url("../images/illustration-woman-online-desktop.svg");
+  }
+
+  .section-img__item,
+  .section-img__item::after {
+    align-items: center;
+    justify-content: stretch;
+  }
+  .section-img__item {
+    top: 0;
+    left: -8rem;
+  }
+  .section-img {
+    background: url("../images/bg-pattern-desktop.svg");
+    background-position: right;
+  }
+  .section-img__item::after {
+    content: url("../images/illustration-box-desktop.svg");
+    top: 3rem;
+    left: -1.8rem;
+    bottom: 0;
+  }
+
+  .section {
+    padding: 3.5rem;
+  }
+  .section__item > .answer--active {
+    height: 65px;
+  }
+
+  .questions__FAQ {
+    margin-top: 1rem;
+  }
+
+  .questions-container {
+    font-size: 1.3em;
+    padding: 2rem;
+  }
+
+  .social-media {
+    font-size: 1.4em;
+  }
+}
