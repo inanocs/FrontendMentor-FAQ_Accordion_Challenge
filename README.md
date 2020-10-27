@@ -6,7 +6,7 @@
 
 Thanks for checking out this front-end coding challenge. This is my first Frontend Mentor challenge.
 
-You can watch website following this link: [Web-Link](https://frontend-mentor-faq-accordion-challenge.vercel.app/)
+You can watch website following this link: [My website deploy in Vercel](https://frontend-mentor-faq-accordion-challenge.vercel.app/)
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges allow you to improve your skills in a real-life workflow.
 
