@@ -112,8 +112,8 @@ body {
   font-weight: 500;
 }
 
-.question-box:hover,
-.question-box__text:hover {
+.question-box:active,
+.question-box__text:active {
   color: var(--soft-red);
 }
 
@@ -224,6 +224,10 @@ body {
     padding: 2rem;
   }
 
+  .question-box:hover,
+  .question-box__text:hover {
+    color: var(--soft-red);
+  }
   .social-media {
     font-size: 1.4em;
   }
